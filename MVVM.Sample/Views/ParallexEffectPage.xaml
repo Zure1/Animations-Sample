@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVM.Sample.Views.ParallexEffectPage"
+             Title="ParallexEffectPage">
+    <ScrollView x:Name="scrollView">
+        <VerticalStackLayout>
+            <!-- Section 1 -->
+            <AbsoluteLayout HeightRequest="600" WidthRequest="{Binding Source={x:Reference scrollView}, Path=Width}">
+                <Image Source="sky.jpeg" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                <Image Source="cloud.jpeg" x:Name="fgImage1_2" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                <Image Source="airplane.png" x:Name="fgImage1_1" AbsoluteLayout.LayoutBounds="0.5,0.5,200,200" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <Label Text="The sky is the limit." FontSize="20" FontAttributes="Bold" x:Name="fgText1" AbsoluteLayout.LayoutBounds="0.5,0.65,-1,-1" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            </AbsoluteLayout>
+
+            <!-- Section 2 -->
+            <AbsoluteLayout HeightRequest="600" WidthRequest="{Binding Source={x:Reference scrollView}, Path=Width}">
+                <Image Source="space.jpeg" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                <Image Source="asteroids.png" x:Name="fgImage2_2" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                <Image Source="earth.png" x:Name="fgImage2_1" AbsoluteLayout.LayoutBounds="0.5,0,200,200" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <Label Text="One world, endless possibilities." TextColor="White" FontSize="20" FontAttributes="Bold" x:Name="fgText2" AbsoluteLayout.LayoutBounds="0.5,0.4,-1,-1" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            </AbsoluteLayout>
+
+            <!-- Section 3 -->
+            <AbsoluteLayout HeightRequest="600" WidthRequest="{Binding Source={x:Reference scrollView}, Path=Width}">
+                <Image Source="mars_atmosphere.jpeg" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                <Image Source="shuttle.png" x:Name="fgImage3" AbsoluteLayout.LayoutBounds="0.5,-0.35,200,200" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <Label Text="Explore new horizons." FontSize="20" TextColor="White" FontAttributes="Bold" x:Name="fgText3" AbsoluteLayout.LayoutBounds="0.5,0.2,-1,-1" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            </AbsoluteLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

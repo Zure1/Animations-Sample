@@ -65,4 +65,27 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Views\" />
+	  <None Remove="ViewModels\" />
+	  <None Remove="Resources\Fonts\FontAwesome.ttf" />
+	  <None Remove="Converters\" />
+	  <None Remove="Resources\Images\Airplane.png" />
+	  <None Remove="Resources\Images\earth.png" />
+	  <None Remove="Resources\Images\Mars_atmosphere.jpg" />
+	  <None Remove="Resources\Images\Shuttle.png" />
+	  <None Remove="Resources\Images\Sky.jpeg" />
+	  <None Remove="Resources\Images\Space.jpeg" />
+	  <None Remove="Resources\Images\asteroids.png" />
+	  <None Remove="Resources\Images\cloud.png" />
+	  <None Remove="Resources\Images\dennis.jpg" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Views\" />
+	  <Folder Include="ViewModels\" />
+	  <Folder Include="Converters\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiFont Include="Resources\Fonts\FontAwesome.ttf" Alias="FontAwesome" />
+	</ItemGroup>
 </Project>

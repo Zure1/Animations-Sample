@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVM.Sample.Views.CardPage"
+             Title="CardPage">
+    <VerticalStackLayout
+        VerticalOptions="Center">
+        <Grid
+            x:Name="FlipCard"
+            WidthRequest="200"
+            HeightRequest="300"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand">
+        <Border
+            x:Name="CardFront"
+            Padding="0"
+            Stroke="Black"
+            StrokeThickness="2"
+            Background="Transparent"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            WidthRequest="200"
+            HeightRequest="300">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Image
+                Source="dennis.jpg"
+                BackgroundColor="Gray"
+                Aspect="AspectFill" />
+        </Border>
+        <Border
+            x:Name="CardBack"
+            Padding="0"
+            Stroke="Black"
+            StrokeThickness="2"
+            Background="Transparent"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            WidthRequest="200"
+            HeightRequest="300"
+            IsVisible="False">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Label
+                Margin="5"
+                HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Name: " FontAttributes="Bold" />
+                        <Span Text="Dennis" />
+                        <Span Text="&#10;Hobbies: " FontAttributes="Bold" />
+                        <Span Text="Animating MAUI controls" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            </Border>
+
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnCardTappedAsync"/>
+        </Grid.GestureRecognizers>
+    </Grid>
+    
+    </VerticalStackLayout>
+</ContentPage>
