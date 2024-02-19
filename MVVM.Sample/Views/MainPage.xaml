@@ -65,6 +65,10 @@
                 Text="Flipable Card"
                 Command="{Binding OpenCardPageCommand}"/>
 
+            <Button
+                Text="Particle Effects"
+                Command="{Binding OpenParticleEffectsPageCommand}"/>
+
         </VerticalStackLayout>
     </ScrollView>
 

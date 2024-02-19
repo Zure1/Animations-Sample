@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customControls="clr-namespace:MVVM.Sample.CustomControls"
+             xmlns:viewmodels="clr-namespace:MVVM.Sample.ViewModels"
+             x:DataType="viewmodels:ParticleEffectsViewModel"
+             x:Class="MVVM.Sample.Views.ParticleEffectsPage"
+             Title="ParticleEffectsPage">
+
+    <ContentPage.BindingContext>
+        <viewmodels:ParticleEffectsViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="particleTemplate">
+                <Label Text="✨" FontSize="24" />
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto,*" ColumnDefinitions="*" Padding="0,150">
+
+            <VerticalStackLayout Grid.Row="0" Spacing="10" Padding="20">
+                <!-- Count -->
+                <HorizontalStackLayout>
+                    <Label Text="Count" VerticalOptions="Center"/>
+                    <Entry x:Name="CountEntry" Placeholder="1" Keyboard="Numeric"/>
+                </HorizontalStackLayout>
+        
+                <!-- Min Angle -->
+                <HorizontalStackLayout>
+                    <Label Text="Min Angle" VerticalOptions="Center"/>
+                    <Entry x:Name="MinAngleEntry" Placeholder="0" Keyboard="Numeric"/>
+                </HorizontalStackLayout>
+        
+                <!-- Max Angle -->
+                <HorizontalStackLayout>
+                    <Label Text="Max Angle" VerticalOptions="Center"/>
+                    <Entry x:Name="MaxAngleEntry" Placeholder="360" Keyboard="Numeric"/>
+                </HorizontalStackLayout>
+        
+                <!-- Min X -->
+                <HorizontalStackLayout>
+                    <Label Text="Min X" VerticalOptions="Center"/>
+                    <Entry x:Name="MinXEntry" Placeholder="0" Keyboard="Numeric"/>
+                </HorizontalStackLayout>
+        
+                <!-- Max X -->
+                <HorizontalStackLayout>
+                    <Label Text="Max X" VerticalOptions="Center"/>
+                    <Entry x:Name="MaxXEntry" Placeholder="0" Keyboard="Numeric"/>
+                </HorizontalStackLayout>
+        
+                <!-- Min Y -->
+                <HorizontalStackLayout>
+                    <Label Text="Min Y" VerticalOptions="Center"/>
+                    <Entry x:Name="MinYEntry" Placeholder="0" Keyboard="Numeric"/>
+                </HorizontalStackLayout>
+        
+                <!-- Max Y -->
+                <HorizontalStackLayout>
+                    <Label Text="Max Y" VerticalOptions="Center"/>
+                    <Entry x:Name="MaxYEntry" Placeholder="0" Keyboard="Numeric"/>
+                </HorizontalStackLayout>
+        
+                <!-- Min Particle Speed -->
+                <HorizontalStackLayout>
+                    <Label Text="Min Particle Speed" VerticalOptions="Center"/>
+                    <Entry x:Name="MinParticleSpeedEntry" Placeholder="1" Keyboard="Numeric"/>
+                </HorizontalStackLayout>
+        
+                <!-- Max Particle Speed -->
+                <HorizontalStackLayout>
+                    <Label Text="Max Particle Speed" VerticalOptions="Center"/>
+                    <Entry x:Name="MaxParticleSpeedEntry" Placeholder="1" Keyboard="Numeric"/>
+                </HorizontalStackLayout>
+        
+                <!-- Particle Lifetime -->
+                <HorizontalStackLayout>
+                    <Label Text="Min Particle Lifetime (ms)" VerticalOptions="Center"/>
+                    <Entry x:Name="MinParticleLifetimeEntry" Placeholder="2000" Keyboard="Numeric"/>
+                </HorizontalStackLayout>
+
+                <!-- Particle Lifetime -->
+                <HorizontalStackLayout>
+                    <Label Text="Max Particle Lifetime (ms)" VerticalOptions="Center"/>
+                    <Entry x:Name="MaxParticleLifetimeEntry" Placeholder="2000" Keyboard="Numeric"/>
+                </HorizontalStackLayout>
+        
+                <!-- Delay Between Particles -->
+                <HorizontalStackLayout>
+                    <Label Text="Delay Between Particles (ms)" VerticalOptions="Center"/>
+                    <Entry x:Name="DelayBetweenParticlesEntry" Placeholder="0" Keyboard="Numeric"/>
+                </HorizontalStackLayout>
+        
+                <!-- Start Animation Button -->
+                <Button
+                    Text="Start Animation"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    Command="{Binding StartAnimationCommand}"/>
+
+            </VerticalStackLayout>
+
+            <!-- Visual Indicator for Particle System in the middle -->
+            <!-- Assuming you want some border or background to indicate the particle system's area -->
+            <BoxView
+                Grid.Row="1"
+                BackgroundColor="Black"
+                HeightRequest="15"
+                WidthRequest="15"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+            </BoxView>
+
+            <customControls:ParticleSystem
+                Grid.Row="1"
+                ParticleTemplate="{StaticResource particleTemplate}"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                x:Name="DemoParticleSystem"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>

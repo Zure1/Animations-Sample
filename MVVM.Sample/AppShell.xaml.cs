@@ -12,7 +12,8 @@ public partial class AppShell : Shell
 
 	private void RegisterRoutes()
 	{
-        Routing.RegisterRoute(nameof(ParallexEffectPage), typeof(ParallexEffectPage));
         Routing.RegisterRoute(nameof(CardPage), typeof(CardPage));
+        Routing.RegisterRoute(nameof(ParallexEffectPage), typeof(ParallexEffectPage));
+        Routing.RegisterRoute(nameof(ParticleEffectsPage), typeof(ParticleEffectsPage));
     }
 }

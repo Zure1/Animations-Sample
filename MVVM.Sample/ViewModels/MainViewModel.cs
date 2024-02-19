@@ -14,8 +14,9 @@ namespace MVVM.Sample.ViewModels
         public MainViewModel()
         {
             LoginCommand = new Command(async () => await LoginAsync());
-            OpenParallexScrollingExampleCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(ParallexEffectPage)));
             OpenCardPageCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(CardPage)));
+            OpenParallexScrollingExampleCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(ParallexEffectPage)));
+            OpenParticleEffectsPageCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(ParticleEffectsPage)));
         }
 
         public bool IsBusy
@@ -32,8 +33,9 @@ namespace MVVM.Sample.ViewModels
         }
 
         public ICommand LoginCommand { get; }
-        public ICommand OpenParallexScrollingExampleCommand { get; }
         public ICommand OpenCardPageCommand { get; }
+        public ICommand OpenParallexScrollingExampleCommand { get; }
+        public ICommand OpenParticleEffectsPageCommand { get; }
 
         public event PropertyChangedEventHandler? PropertyChanged;
         public event EventHandler? LoginFailed;

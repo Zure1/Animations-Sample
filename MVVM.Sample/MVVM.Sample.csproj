@@ -79,11 +79,13 @@
 	  <None Remove="Resources\Images\asteroids.png" />
 	  <None Remove="Resources\Images\cloud.png" />
 	  <None Remove="Resources\Images\dennis.jpg" />
+	  <None Remove="CustomControls\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
 	  <Folder Include="ViewModels\" />
 	  <Folder Include="Converters\" />
+	  <Folder Include="CustomControls\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiFont Include="Resources\Fonts\FontAwesome.ttf" Alias="FontAwesome" />
