@@ -17,7 +17,7 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
+            Padding="30,0,30,30"
             Spacing="25">
 
             <VerticalStackLayout
@@ -56,18 +56,10 @@
                 FontSize="60"/>
 
             <Label Text="Examples:"/>
-
-            <Button
-                Text="Parallex Scrolling"
-                Command="{Binding OpenParallexScrollingExampleCommand}"/>
-
-            <Button
-                Text="Flipable Card"
-                Command="{Binding OpenCardPageCommand}"/>
-
-            <Button
-                Text="Particle Effects"
-                Command="{Binding OpenParticleEffectsPageCommand}"/>
+            <Button Text="Parallex Scrolling" Command="{Binding OpenParallexScrollingExampleCommand}"/>
+            <Button Text="Flipable Card" Command="{Binding OpenCardPageCommand}"/>
+            <Button Text="Particle Effects" Command="{Binding OpenParticleEffectsPageCommand}"/>
+            <Button Text="Scale Animations" Command="{Binding OpenBasicAnimationsPageCommand}"/>
 
         </VerticalStackLayout>
     </ScrollView>

@@ -15,5 +15,6 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(CardPage), typeof(CardPage));
         Routing.RegisterRoute(nameof(ParallexEffectPage), typeof(ParallexEffectPage));
         Routing.RegisterRoute(nameof(ParticleEffectsPage), typeof(ParticleEffectsPage));
+        Routing.RegisterRoute(nameof(BasicAnimationsPage), typeof(BasicAnimationsPage));
     }
 }

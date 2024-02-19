@@ -17,6 +17,7 @@ namespace MVVM.Sample.ViewModels
             OpenCardPageCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(CardPage)));
             OpenParallexScrollingExampleCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(ParallexEffectPage)));
             OpenParticleEffectsPageCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(ParticleEffectsPage)));
+            OpenBasicAnimationsPageCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(BasicAnimationsPage)));
         }
 
         public bool IsBusy
@@ -36,6 +37,7 @@ namespace MVVM.Sample.ViewModels
         public ICommand OpenCardPageCommand { get; }
         public ICommand OpenParallexScrollingExampleCommand { get; }
         public ICommand OpenParticleEffectsPageCommand { get; }
+        public ICommand OpenBasicAnimationsPageCommand { get; }
 
         public event PropertyChangedEventHandler? PropertyChanged;
         public event EventHandler? LoginFailed;
