@@ -60,7 +60,7 @@ public partial class BasicAnimationsPage : ContentPage
         notification.IsVisible = false;
     }
 
-    async void FadeAnimationButtonClicked(System.Object sender, System.EventArgs e)
+    async void FadeAnimationButtonClicked(object sender, EventArgs e)
     {
         splashscreen.IsVisible = true;
 
