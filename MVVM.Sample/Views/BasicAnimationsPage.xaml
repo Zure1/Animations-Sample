@@ -17,7 +17,8 @@
             </HorizontalStackLayout>
             <Button Text="Spring Animation" Clicked="OnSpringAnimationButtonClicked" HorizontalOptions="Center" />
             <Button Text="Enlarge" Clicked="OnFullscreenButtonClicked" HorizontalOptions="Center" />
-            <Button Text="Show Notification (Translate)" Clicked="ShowNotificationClicked" HorizontalOptions="Center" />
+            <Button Text="Show Notification (Translate)" Clicked="ShowNotificationButtonClicked" HorizontalOptions="Center" />
+            <Button Text="Fade Animation" Clicked="FadeAnimationButtonClicked" HorizontalOptions="Center"/>
 
         </VerticalStackLayout>
 
@@ -37,5 +38,14 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
         </Grid>
+
+        <Image
+            x:Name="splashscreen"
+            Source="splashscreen.jpg"
+            Aspect="AspectFill"
+            IsVisible="False"
+            Opacity="0"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand" />
     </Grid>
 </ContentPage>

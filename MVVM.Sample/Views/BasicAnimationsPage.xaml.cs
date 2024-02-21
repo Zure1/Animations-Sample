@@ -44,7 +44,7 @@ public partial class BasicAnimationsPage : ContentPage
         await AnimatedImage.ScaleTo(1, 500);
     }
 
-    async void ShowNotificationClicked(object sender, EventArgs e)
+    async void ShowNotificationButtonClicked(object sender, EventArgs e)
     {
         // Make the banner visible and animate it into view
         notification.IsVisible = true;
@@ -58,5 +58,16 @@ public partial class BasicAnimationsPage : ContentPage
         await notification.TranslateTo(0, -60, 500);
 
         notification.IsVisible = false;
+    }
+
+    async void FadeAnimationButtonClicked(System.Object sender, System.EventArgs e)
+    {
+        splashscreen.IsVisible = true;
+
+        await splashscreen.FadeTo(1, 500);
+        await Task.Delay(2000);
+        await splashscreen.FadeTo(0, 500);
+
+        splashscreen.IsVisible = false;
     }
 }

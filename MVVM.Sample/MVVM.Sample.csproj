@@ -80,6 +80,7 @@
 	  <None Remove="Resources\Images\cloud.png" />
 	  <None Remove="Resources\Images\dennis.jpg" />
 	  <None Remove="CustomControls\" />
+	  <None Remove="Resources\Images\splashscreen.jpg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
