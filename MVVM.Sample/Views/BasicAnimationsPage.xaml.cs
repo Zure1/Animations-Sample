@@ -43,4 +43,20 @@ public partial class BasicAnimationsPage : ContentPage
         // Scale back to original size
         await AnimatedImage.ScaleTo(1, 500);
     }
+
+    async void ShowNotificationClicked(object sender, EventArgs e)
+    {
+        // Make the banner visible and animate it into view
+        notification.IsVisible = true;
+
+        await notification.TranslateTo(0, 0, 500);
+
+        // Wait for 2 seconds
+        await Task.Delay(2000);
+
+        // Animate the banner back out of view and hide it
+        await notification.TranslateTo(0, -60, 500);
+
+        notification.IsVisible = false;
+    }
 }

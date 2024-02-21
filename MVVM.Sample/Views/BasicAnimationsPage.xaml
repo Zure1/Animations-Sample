@@ -3,18 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MVVM.Sample.Views.BasicAnimationsPage"
              Title="Basic Animations Page">
-    <VerticalStackLayout Spacing="10" Padding="0,10">
-        <Image x:Name="AnimatedImage" 
-               Source="dotnet_bot" 
-               WidthRequest="200"
-               HeightRequest="200" />
+    <Grid>
+        <!-- Content Layer -->
+        <VerticalStackLayout Spacing="10" Padding="0,10">
+            <Image x:Name="AnimatedImage" 
+                   Source="dotnet_bot" 
+                   WidthRequest="200"
+                   HeightRequest="200" />
 
-        <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
-            <Button Text="Rotate left" Clicked="OnRotateLeftClicked" HorizontalOptions="Center" />
-            <Button Text="Rotate right" Clicked="OnRotateRightClicked" HorizontalOptions="Center" />
-        </HorizontalStackLayout>
-        <Button Text="Spring Animation" Clicked="OnSpringAnimationButtonClicked" HorizontalOptions="Center" />
-        <Button Text="Enlarge" Clicked="OnFullscreenButtonClicked" HorizontalOptions="Center" />
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+                <Button Text="Rotate left" Clicked="OnRotateLeftClicked" HorizontalOptions="Center" />
+                <Button Text="Rotate right" Clicked="OnRotateRightClicked" HorizontalOptions="Center" />
+            </HorizontalStackLayout>
+            <Button Text="Spring Animation" Clicked="OnSpringAnimationButtonClicked" HorizontalOptions="Center" />
+            <Button Text="Enlarge" Clicked="OnFullscreenButtonClicked" HorizontalOptions="Center" />
+            <Button Text="Show Notification (Translate)" Clicked="ShowNotificationClicked" HorizontalOptions="Center" />
 
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+
+        <!-- Notification Layer -->
+        <Grid
+            x:Name="notification"
+            RowDefinitions="50"
+            IsVisible="False"
+            TranslationY="-60">
+            <BoxView
+                BackgroundColor="DarkBlue"
+                AbsoluteLayout.LayoutBounds="0,0,1,-1"
+                AbsoluteLayout.LayoutFlags="WidthProportional"/>
+            <Label
+                Text="Hah, it's me! The notification banner!"
+                TextColor="White"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Grid>
+    </Grid>
 </ContentPage>
