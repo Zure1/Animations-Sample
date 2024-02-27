@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:converters="clr-namespace:MVVM.Sample.Converters"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MVVM.Sample.ViewModels"
+             x:Class="MVVM.Sample.Views.LoginPage"
+             Title="LoginPage">
+
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout
+        x:Name="LoginContainer"
+        Padding="30,0"
+        Spacing="25">
+
+        <Image
+            Source="dotnet_bot.png"
+            HeightRequest="185"
+            Aspect="AspectFit"
+            SemanticProperties.Description="dot net bot in a race car number eight" />
+
+        <Entry Placeholder="Username"/>
+
+        <Entry Placeholder="Password" IsPassword="True"/>
+
+        <Label
+            Text="{Binding LoginErrorHintText}"
+            TextColor="DarkRed"
+            Margin="0,-15,0,0"
+            HorizontalOptions="Center"/>
+
+        <Button
+            Text="Login"
+            Command="{Binding LoginCommand}"
+            IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}"/>
+
+        <Label  
+            x:Name="LoadingIndicator"
+            IsVisible="{Binding IsBusy}"
+            HorizontalOptions="Center"
+            Text="0"
+            FontFamily="FontAwesome"
+            FontSize="60"/>
+
+    </VerticalStackLayout>
+</ContentPage>
