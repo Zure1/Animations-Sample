@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MVVM.Sample.Views;
+﻿namespace MVVM.Sample.Views;
 
 public partial class CardPage : ContentPage
 {
