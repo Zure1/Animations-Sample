@@ -81,12 +81,14 @@
 	  <None Remove="Resources\Images\dennis.jpg" />
 	  <None Remove="CustomControls\" />
 	  <None Remove="Resources\Images\splashscreen.jpg" />
+	  <None Remove="Commands\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
 	  <Folder Include="ViewModels\" />
 	  <Folder Include="Converters\" />
 	  <Folder Include="CustomControls\" />
+	  <Folder Include="Commands\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiFont Include="Resources\Fonts\FontAwesome.ttf" Alias="FontAwesome" />

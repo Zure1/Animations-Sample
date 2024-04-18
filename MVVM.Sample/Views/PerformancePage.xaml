@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:MVVM.Sample.ViewModels"
+             x:Class="MVVM.Sample.Views.PerformancePage"
+             Title="PerformancePage">
+
+    <ContentPage.BindingContext>
+        <viewmodels:PerformanceViewModel/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Spacing="10">
+        <Button
+            HorizontalOptions="Center"
+            Text="Run I/O Task"
+            Command="{Binding RunIoTaskCommand}">
+        </Button>
+
+        <Button
+            HorizontalOptions="Center"
+            Text="Run CPU Task"
+            Command="{Binding RunCpuTaskCommand}">
+        </Button>
+
+        <Button
+            HorizontalOptions="Center"
+            Text="Run Test"
+            Command="{Binding TestCommand}">
+        </Button>
+
+        <BoxView
+            x:Name="animatedBox"
+            Margin="0,50,0,0"
+            BackgroundColor="Green"
+            HeightRequest="50"
+            WidthRequest="50">
+        </BoxView>
+        
+    </VerticalStackLayout>
+</ContentPage>

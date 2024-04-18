@@ -13,6 +13,7 @@ namespace MVVM.Sample.ViewModels
             OpenParallexScrollingExampleCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(ParallexEffectPage)));
             OpenParticleEffectsPageCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(ParticleEffectsPage)));
             OpenBasicAnimationsPageCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(BasicAnimationsPage)));
+            OpenPerformancePageCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(PerformancePage)));
         }
 
 
@@ -21,5 +22,6 @@ namespace MVVM.Sample.ViewModels
         public ICommand OpenParallexScrollingExampleCommand { get; }
         public ICommand OpenParticleEffectsPageCommand { get; }
         public ICommand OpenBasicAnimationsPageCommand { get; }
+        public ICommand OpenPerformancePageCommand { get; }
     }
 }

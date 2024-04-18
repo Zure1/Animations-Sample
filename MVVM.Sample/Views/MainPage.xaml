@@ -26,6 +26,7 @@
             <Button Text="Flipable Card" Command="{Binding OpenCardPageCommand}"/>
             <Button Text="Parallex Scrolling" Command="{Binding OpenParallexScrollingExampleCommand}"/>
             <Button Text="Particle Effects" Command="{Binding OpenParticleEffectsPageCommand}"/>
+            <Button Text="Performance Considerations" Command="{Binding OpenPerformancePageCommand}"/>
 
         </VerticalStackLayout>
     </ScrollView>
