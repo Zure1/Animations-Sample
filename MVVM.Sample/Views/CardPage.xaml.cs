@@ -11,7 +11,11 @@ public partial class CardPage : ContentPage
 
     private async void OnCardTappedAsync(object sender, EventArgs e)
     {
-        // Animate the flip effect
+        await AnimateFlipEffectAsync();
+    }
+
+    private async Task AnimateFlipEffectAsync()
+    {
         if (!_isFlipped)
         {
             await FlipCard.RotateYTo(90, 250, Easing.Linear);
