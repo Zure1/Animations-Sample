@@ -7,12 +7,12 @@ public partial class BasicAnimationsPage : ContentPage
 		InitializeComponent();
 	}
 
-    private async void OnRotateLeftClicked(System.Object sender, System.EventArgs e)
+    private async void OnRotateLeftClicked(object sender, EventArgs e)
     {
         await AnimatedImage.RotateTo(AnimatedImage.Rotation - 90, 200);
     }
 
-    private async void OnRotateRightClicked(System.Object sender, System.EventArgs e)
+    private async void OnRotateRightClicked(object sender, EventArgs e)
     {
         await AnimatedImage.RotateTo(AnimatedImage.Rotation + 90, 200);
     }
